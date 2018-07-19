@@ -1,3 +1,36 @@
+
+Hello, I would like to thank you for letting me participate in this code challenge.
+
+I basically worked everything with binary trees to have all insertions as Fast as possible.
+
+First, I created a binary balanced tree for initial insertion of the data which I called DrugsAVL (based on the names of the drug)
+	 where I added another binary balanced tree for each of the nodes of the drugs, because I wanted to have what were the 
+	 different prescribers for each of the drug, only name was important for me, but I also saved the # of times that was called
+
+Then, to make the ordered list I created another binary balanced tree that was receiving each of the values when emptying the original
+	drugs list (original binary tree), the important or key for this tree was the specific value. Here I also created another
+        binary balanced tree for each of the drugs that have the same cost, consequently, I can print them at the end in order.
+
+I assumed that the order desired for the file is:
+
+Cost descending order
+Name of the drug ascending order
+
+I ran it for different tests.
+
+Test 2 is when I only added my name and also, I on purpose Added a value invalid with an a at the end.
+
+Test 3 I ran it for 10000 lines of the received file.
+
+Also, I added a part in which I was able to easily find the line that has the problem storing the lines that were givingme trouble
+during runtime in a simple list that I printed at the end. However, as it was not was it was expected in the output, I just commented
+the print at the end of that list. If you want to see it, just uncomment line 67, please.
+
+I programmed everything in a rapsberry pi.
+
+
+#######################################################
+
 # Table of Contents
 1. [Problem](README.md#problem)
 2. [Input Dataset](README.md#input-dataset)

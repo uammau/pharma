@@ -24,6 +24,7 @@ def readFile(inputFileName, outputFileName):
     successful = 0
     # Sets counter of errors
     errors = 0
+    lstErrors = []
     
     # Initializes counter of inserted
     inserted = 0
@@ -41,6 +42,8 @@ def readFile(inputFileName, outputFileName):
                 errors += 1
                 error = True
                 print('[FAIL]: test_' + str(curLine))
+                strTemp = str(curLine) + ' - ' + line
+                lstErrors.append(strTemp)
             else:
                 inserted = tree.insert(lineDivided[3], lineDivided[3] + ',' + lineDivided[1] + ',' + lineDivided[2], lineDivided[4])
                 print('[PASS]: test_' + str(curLine))
@@ -60,6 +63,8 @@ def readFile(inputFileName, outputFileName):
         
     costs = None
     tree.root.createCostsAVL(costs, outputFileName)
+    
+    print (str(lstErrors))
     
 if __name__ == '__main__':
     if (len(sys.argv) < 2):
