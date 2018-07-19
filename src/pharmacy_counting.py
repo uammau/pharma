@@ -64,7 +64,7 @@ def readFile(inputFileName, outputFileName):
     costs = None
     tree.root.createCostsAVL(costs, outputFileName)
     
-    print (str(lstErrors))
+##    print (str(lstErrors))
     
 if __name__ == '__main__':
     if (len(sys.argv) < 2):
