@@ -52,7 +52,10 @@ def readFile(inputFileName, outputFileName):
         
     curLine -= 1 # Substracting line 1
         
-    timeStamp = datetime.datetime.now().timestamp()
+##    timeStamp = datetime.datetime.now().timestamp()
+    t = datetime.datetime.now()
+    timeStamp = time.mktime(t.timetuple()) + t.microsecond / 1E6
+    
     print ('[ ' + time.strftime("%a %b %d %H:%M:%S %Z %Y", time.gmtime(timeStamp)) + ' ] : ' + str(successful) + ' of ' + str(curLine) + ' tests passed')
         
     costs = None
