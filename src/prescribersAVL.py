@@ -183,8 +183,11 @@ class prescribersAVLNode(object):
             if (self.left != None):
                 self.left.writetoFileInOrder(outputFile)
 
+            value = self.key
+            if (value.endswith('.0') == True):
+                value = value[:-2]
             # Writes to the file what is expected
-            outputFile.write('\n' + self.key)
+            outputFile.write('\n' + value)
                 
             if (self.right != None):
                 self.right.writetoFileInOrder(outputFile)
